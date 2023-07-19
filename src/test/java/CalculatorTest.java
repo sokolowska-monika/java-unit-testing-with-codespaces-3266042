@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
@@ -8,8 +8,8 @@ public class CalculatorTest {
 
     @Test
     public void testAdd() {
-        int expected = 3;
 
+        int expected = 3;
         int actual = calculator.add(1, 2);
 
         assertEquals(expected, actual);
@@ -17,8 +17,8 @@ public class CalculatorTest {
 
     @Test
     public void testSubtract() {
-        int expected = 3;
 
+        int expected = 3;
         int actual = calculator.subtract(5, 2);
 
         assertEquals(expected, actual);
@@ -26,8 +26,8 @@ public class CalculatorTest {
 
     @Test
     public void testMultiply() {
-        int expected = 6;
 
+        int expected = 6;
         int actual = calculator.multiply(2, 3);
 
         assertEquals(expected, actual);
@@ -35,11 +35,28 @@ public class CalculatorTest {
 
     @Test
     public void testDivide() {
-        int expected = 2;
 
+        int expected = 2;
         int actual = calculator.divide(6, 3);
 
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testIsEven() {
+
+        //boolean expected = true;
+        boolean actual = calculator.isEven(2);
+
+        //assertEquals(expected, actual);
+        assertTrue(actual);
+    }
+
+    @Test
+    public void testIsOdd() {
+
+        boolean actual = calculator.isEven(1);
+
+        assertFalse(actual);
+    }
 }
