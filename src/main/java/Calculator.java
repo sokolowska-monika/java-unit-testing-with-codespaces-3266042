@@ -16,9 +16,11 @@ public class Calculator {
 
     // This method should return the result of diving x by y.
     public int divide(int x, int y) {
+        if(y==0){
+            throw new IllegalArgumentException("Ints cannot be divided by zero");
+        }
         return x / y;
     }
-
 
     public boolean isEven(int i) {
         return i % 2 == 0;
@@ -31,5 +33,4 @@ public class Calculator {
         }
         return newValues;
     }
-
 }
